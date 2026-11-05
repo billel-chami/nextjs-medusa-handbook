@@ -1,0 +1,22 @@
+{
+  "name": "@ecom/backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "medusa develop",
+    "build": "medusa build",
+    "start": "medusa start",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ecom/types": "workspace:*",
+    "@medusajs/framework": "^2.22.3",
+    "@medusajs/medusa": "^2.22.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.5",
+    "typescript": "^5.7.3"
+  }
+}
+

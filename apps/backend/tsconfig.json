@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "moduleResolution": "nodenext",
+    "module": "nodenext",
+    "rootDir": ".",
+    "outDir": "dist"
+  },
+  "include": ["src/**/*", "medusa-config.ts"]
+}

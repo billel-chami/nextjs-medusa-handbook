@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  /* ==========================================================================
+     COLOR TOKENS (Perceptually Uniform OKLCH)
+     ========================================================================== */
+  --color-canvas: oklch(0.985 0.002 240);
+  --color-surface-panel: oklch(0.965 0.005 240);
+  --color-surface-elevated: oklch(1 0 0);
+  --color-surface-sunken: oklch(0.935 0.01 240);
+
+  --color-content-primary: oklch(0.14 0.02 240);
+  --color-content-secondary: oklch(0.40 0.03 240);
+  --color-content-muted: oklch(0.60 0.02 240);
+  --color-content-inverse: oklch(0.99 0 0);
+
+  --color-border-subtle: oklch(0.90 0.01 240);
+  --color-border-strong: oklch(0.78 0.02 240);
+  --color-border-interactive: oklch(0.20 0.03 240);
+
+  --color-brand-primary: oklch(0.25 0.05 250);
+  --color-brand-hover: oklch(0.18 0.05 250);
+  --color-brand-accent: oklch(0.68 0.18 45);
+
+  --color-state-error: oklch(0.62 0.22 25);
+  --color-state-success: oklch(0.65 0.18 145);
+  --color-state-warning: oklch(0.75 0.15 80);
+
+  /* ==========================================================================
+     TYPOGRAPHY TOKENS (Fluid scaling via clamp())
+     ========================================================================== */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --text-display: clamp(2.5rem, 5vw + 1rem, 4.5rem);
+  --text-h1: clamp(2rem, 3vw + 1rem, 3rem);
+  --text-h2: clamp(1.5rem, 2vw + 0.8rem, 2.25rem);
+  --text-h3: clamp(1.25rem, 1.5vw + 0.6rem, 1.75rem);
+  --text-body-lg: 1.125rem;
+  --text-body: 1rem;
+  --text-body-sm: 0.875rem;
+  --text-caption: 0.75rem;
+
+  /* ==========================================================================
+     SPACING & LAYOUT TOKENS
+     ========================================================================== */
+  --spacing-container-padding: clamp(1rem, 4vw, 3rem);
+  --spacing-section-gap: clamp(3rem, 6vw, 6rem);
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+
+  /* Header & Target Metrics */
+  --size-touch-target: 2.75rem;
+  --size-header-height: 4.5rem;
+
+  /* ==========================================================================
+     MOTION & EASING TOKENS
+     ========================================================================== */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-smooth: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+}
+
+/* Base resets & smooth transitions */
+:root {
+  color-scheme: light;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-content-primary);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Arabic typography overrides */
+html[lang="ar"] body {
+  font-family: var(--font-arabic), var(--font-sans), sans-serif;
+  letter-spacing: normal;
+}
+
+/* Hardware accelerated transform hints for animated elements */
+.will-change-transform {
+  will-change: transform, opacity;
+}
+
