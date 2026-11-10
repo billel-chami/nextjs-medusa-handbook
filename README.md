@@ -45,8 +45,7 @@ The AI assistant stops behaving like a generic autocomplete tool and starts oper
 
 ### 2. Installation
 ```bash
-git clone <your-repo-url>
-cd ecom
+git clone https://github.com/billel-chami/nextjs-medusa-handbook.git .
 pnpm install
 ```
 
