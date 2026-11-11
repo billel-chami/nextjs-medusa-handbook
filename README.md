@@ -21,6 +21,45 @@ Every engineer on your team can launch the app, click **"Handbook & Crash Course
 
 ---
 
+## 🎯 How to Use This Repo: The Developer Levelling Up (Self-Study)
+
+Octera is an **AI-Governed Engineering Simulator & Production Starter**. It is **not** a completed demo store filled with fake mock products. Instead, it provides an enterprise-grade empty foundation wired with an embedded **"AI Senior Architect"**.
+
+If you want to master Next.js 16, Medusa v2, clean architecture, and OWASP security, you use this repo as your private 1-on-1 engineering simulator: you follow the **5 Sprints** sequentially, using your AI assistant to build each feature from scratch while reading deep First-Principles mentorship reports explaining the computer science behind every line of code.
+
+---
+
+## 🔄 The Exact Day-to-Day Developer Workflow (The 4-Step Loop)
+
+```mermaid
+flowchart LR
+    A["1. Spin Up<br/><code>pnpm db:up</code><br/><code>pnpm dev:storefront</code>"] --> B["2. Learn Pattern<br/>Read <code>/docs</code>"]
+    B --> C["3. Prompt AI<br/>Run Sprint Prompt"]
+    C --> D["4. Review & Learn<br/>Inspect Code & Report"]
+    D --> E["5. Next Sprint"]
+```
+
+1. **Step 1: Spin Up (3 Minutes)**
+   Clone the repository directly into your current directory and start the isolated databases:
+   ```bash
+   git clone https://github.com/billel-chami/nextjs-medusa-handbook.git .
+   pnpm install
+   pnpm db:up          # Starts PostgreSQL 16 on 5433 and Redis 7 on 6380
+   pnpm dev:storefront # Storefront UI on http://localhost:3000
+   ```
+
+2. **Step 2: Learn the Architectural Pattern**
+   Open **[http://localhost:3000/docs](http://localhost:3000/docs)** (or click *"Handbook & Crash Course"* in the header). Review the architectural pillars, real-world analogies, and critical hooks (`useActionState`, `useOptimistic`) for the module you're building.
+
+3. **Step 3: Prompt Your AI Assistant**
+   Open this repo in your AI IDE (Antigravity, Cursor, etc.). Copy the sprint prompt (from the homepage or [Sprint Curriculum](#-the-feature-implementation-curriculum)) into the AI chat:
+   > *"Build Module 1: Catalog & Discovery Engine. Connect to Medusa v2 SDK, configure fine-grained 'use cache' with cacheTag, and build an accessible product grid with filter controls."*
+
+4. **Step 4: Review Code & Read the Mentorship Report**
+   The embedded skills in `.agents/skills/` force the AI to write Clean Architecture code, audit for OWASP vulnerabilities and Core Web Vitals, and output a **First-Principles Mentorship Report**. Inspect the implementation, verify the live feature, and move to the next sprint!
+
+---
+
 ## 🌟 Why This Repo Exists & How Your Team Benefits
 
 This repository is **not just boilerplate code**; it is an **Autonomous Pair-Programming and Mentorship Platform**. 
@@ -70,7 +109,7 @@ pnpm dev:backend
 # ➜ Available at http://localhost:9000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the live Starter Canvas. Hover over the **Language & Direction** switcher in the header to select **English (EN)**, **العربية (AR)**, or **Français (FR)** and observe full trilingual translation and CSS logical properties automatically mirroring layout geometry!
+Open [http://localhost:3000](http://localhost:3000) to view the live Starter Canvas. Hover over the **Language & Direction** switcher in the header to select **English**, **العربية**, or **Français** and observe full trilingual translation and CSS logical properties automatically mirroring layout geometry!
 
 ---
 
